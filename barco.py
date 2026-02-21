@@ -1,0 +1,25 @@
+import pygame
+class Barco:
+    def __init__(self, bt_game):
+        self.screen = bt_game.screen
+        self.screen_rect = bt_game.screen.get_rect()
+
+        self.imagen = pygame.image.load('imagenes/Barco1.bmp')
+        self.rect = self.imagen.get_rect()
+        self.rect.midbottom = self.screen_rect.midbottom
+
+        self.moviendoIzquierda = False
+        self.moviendoDerecha = False
+
+
+    
+    def blime(self):
+        self.screen.blit(self.imagen, self.rect)
+    
+    def actualizar(self):
+        if self.moviendoDerecha:
+            self.rect.x += 10
+        if self.moviendoIzquierda:
+            self.rect.x -= 10
+
+        
