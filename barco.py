@@ -1,12 +1,13 @@
 #Archivo para la entidad del barco 
-
 import pygame
+from resources import recurso_ruta
+
 class Barco:
     def __init__(self, bt_game):
         self.screen = bt_game.screen
         self.screen_rect = bt_game.screen.get_rect()
         #carga la imagen del barco y lo posiciona al centro y en medio
-        self.imagen = pygame.image.load('imagenes/Barco1.bmp')
+        self.imagen = pygame.image.load(recurso_ruta('imagenes/Barco1.bmp'))
         self.rect = self.imagen.get_rect()
         self.rect.midbottom = self.screen_rect.midbottom
 

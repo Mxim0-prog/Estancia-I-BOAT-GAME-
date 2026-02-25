@@ -2,6 +2,7 @@
 import pygame
 from pygame.sprite import Sprite
 import random
+from resources import recurso_ruta
 
 class Bolsa(Sprite):
     #Carga los recolectables tipo bolsa, su imagen y los posiciona aleatoriamente en la parte superior
@@ -10,7 +11,7 @@ class Bolsa(Sprite):
         self.bt_game = bt_game
         self.screen = bt_game.screen
 
-        self.image = pygame.image.load('imagenes/Bolsa.bmp')
+        self.image = pygame.image.load(recurso_ruta('imagenes/Bolsa.bmp'))
         self.rect = self.image.get_rect()
 
         self.rect.y = self.rect.height-150
@@ -28,7 +29,7 @@ class Botella(Sprite):
         self.bt_game = bt_game
         self.screen = bt_game.screen
 
-        self.image = pygame.image.load('imagenes/Botella.bmp')
+        self.image = pygame.image.load(recurso_ruta('imagenes/Botella.bmp'))
         self.rect = self.image.get_rect()
 
         self.rect.y = self.rect.height-150

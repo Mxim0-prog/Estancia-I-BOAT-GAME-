@@ -2,6 +2,7 @@
 import pygame
 from pygame.sprite import Sprite
 import random
+from resources import recurso_ruta
 
 class Enemigo(Sprite):
     def __init__(self,bt_game):
@@ -10,7 +11,7 @@ class Enemigo(Sprite):
         self.bt_game = bt_game
         self.screen = bt_game.screen
 
-        self.image = pygame.image.load('imagenes/Enemigo1.bmp')
+        self.image = pygame.image.load(recurso_ruta('imagenes/Enemigo1.bmp'))
         self.rect = self.image.get_rect()
 
         self.rect.y = self.rect.height-150
