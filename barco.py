@@ -1,9 +1,11 @@
+#Archivo para la entidad del barco 
+
 import pygame
 class Barco:
     def __init__(self, bt_game):
         self.screen = bt_game.screen
         self.screen_rect = bt_game.screen.get_rect()
-
+        #carga la imagen del barco y lo posiciona al centro y en medio
         self.imagen = pygame.image.load('imagenes/Barco1.bmp')
         self.rect = self.imagen.get_rect()
         self.rect.midbottom = self.screen_rect.midbottom
@@ -12,10 +14,10 @@ class Barco:
         self.moviendoDerecha = False
 
 
-    
+    #dibuja el barco en la posicion
     def blime(self):
         self.screen.blit(self.imagen, self.rect)
-    
+    #actualiza la posicion del barco
     def actualizar(self):
         if self.moviendoDerecha:
             self.rect.x += 10

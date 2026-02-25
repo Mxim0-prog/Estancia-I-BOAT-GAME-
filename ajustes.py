@@ -1,5 +1,7 @@
+#Ajustes de las entidades del juego
 class Ajustes:
     def __init__(self):
+        #configuracion de la pantalla y su imagen de fondo
         self.anchura = 1300  
         self.altura = 507 
         self.fondo = 'imagenes/Mapa1.png'
